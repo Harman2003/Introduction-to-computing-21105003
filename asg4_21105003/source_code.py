@@ -1,6 +1,5 @@
 print("Assignment 4\n")
 
-
 print('\nQuestion 1\n')
 
 def hanoi(n, disk_1 , disk_2 , aux):
@@ -19,9 +18,8 @@ hanoi(3, 'A', 'C', 'B')
 print("\nQuestion 2\n")
 # Pascal's Triangle
 
-
 # using recursion
-n = int(input("Enter n upto which pascal triangle is to be printed."))
+n = int(input("Enter n upto which pascal triangle is to be printed: "))
 print("\n Recursive Way : \n")
 def pascal(n, space=n):
     if n<0:
@@ -33,7 +31,6 @@ def pascal(n, space=n):
 
     #printing the spaces
     print('  '*(space-n), end='')
-
    
     val = 1
     for row in range(1, n+1):
@@ -47,12 +44,12 @@ def pascal(n, space=n):
 
 pascal(n)
 
-# using iterations.
+# using iterations
 print("\n Iterative way : \n")
 
 for row in range(1, n+1):
 
-    # printing spaces.
+    # printing spaces
     print('  '*(n - row), end='') #In each row (n-row) spaces to be printed
 
     val = 1
@@ -83,7 +80,7 @@ print("Quotient is: ",d)
 #Checking if function is callable
 flag = callable(divmod)
 print(flag, end="")
-if a_part == True:
+if flag == True:
     print(", means it is callable")
 else:
     print(", means it is not callable")
@@ -135,7 +132,7 @@ class Student:
 
     def student_info(self):
         print("Student Name : ", self.name)
-        print("Roll No : ", self.roll_no)
+        print("Roll No : ", self.rollno)
 
     #Initailising Destructor
     def __del__(self):
@@ -147,9 +144,6 @@ roll_no = int(input("Enter SID of %s: " % (name)))
 my_student = Student(name,roll_no)  #Creating object
 my_student.student_info()           #Printing student Information
 del my_student                      #Deleting the student object
-
-
-
 
 
 
@@ -217,11 +211,10 @@ Anagrams= anagrams(George_word)
 
 flag= False
 for i in Anagrams :
-   if i== Barbie_word and flag==False:
+   if i.lower()== Barbie_word.lower() and flag==False:
          print("Barbie and George are true friends")
          flag= True
 if flag==False :         
   print("George and Barbie's friendship is fake")
-
 
 
